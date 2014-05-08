@@ -1,0 +1,18 @@
+
+Downloading http://pic.rosi.mn//image/00001/$.face.jpg
+Store in rosi-pics/ROSI-1/ROSI-1-000.jpg
+
+Downloading http://img.cdn.rosi.mn//00001/001-eaad361aa9c35025eb1e6285d16dd876.jpg
+Store in rosi-pics/ROSI-1/ROSI-1-001.jpg
+
+Downloading http://img.cdn.rosi.mn//00001/002-015fceaa28b89745c9f200c29153b072.jpg
+Store in rosi-pics/ROSI-1/ROSI-1-002.jpg
+
+Downloading http://img.cdn.rosi.mn//00001/003-18c741fbd73e4ceb1eb621ddd91382c1.jpg
+Store in rosi-pics/ROSI-1/ROSI-1-003.jpg
+
+Downloading http://img.cdn.rosi.mn//00001/004-0cf1d7ae4007c19fa304172a35fcb451.jpg
+Store in rosi-pics/ROSI-1/ROSI-1-004.jpg
+
+Downloading http://img.cdn.rosi.mn//00001/005-6f43df3b3ef9a4adaa3af9ffe5bafb70.jpg
+Store in rosi-pics/ROSI-1/ROSI-1-005.jpg
