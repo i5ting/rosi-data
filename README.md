@@ -1,5 +1,11 @@
 # readme
 
+准备数据
+
+```
+nohup ruby download.rb &
+```
+
 把nohup日志转成对应的sqlite3中
 
 ## 建表语句

@@ -17,12 +17,10 @@ def download_pics_albumID(albumID)
   dir = 'rosi-pics/ROSI-' + albumID.to_s
   FileUtils.mkdir_p dir
 
-
   url = 'http://rosi.mn/x/album-' + albumID.to_s + '.htm'
   http = ""
   myretry { http = Curl.get(url) }
   doc = Nokogiri::HTML(http.body)
-
 
   coverimg = doc.css("div#album-face img")
   coverurl = coverimg[0]['src']
@@ -59,5 +57,3 @@ end
 for num in 1..882
     download_pics_albumID num
 end
-
-
