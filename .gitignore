@@ -1,0 +1,5 @@
+db/*
+log/*
+nohup*
+.bundle/
+Gemfile.lock
