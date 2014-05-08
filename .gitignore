@@ -1,5 +1,5 @@
-db/*
-log/*
+log/*.log
+db/development.sqlite3
 nohup*
 .bundle/
 Gemfile.lock
