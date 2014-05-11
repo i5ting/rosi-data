@@ -84,3 +84,8 @@ rake dbmigrate && rake run
 - sqlite3
 - active record
 
+
+## todo
+
+- 缓存默认的album id
+- 使用FastImageCache
