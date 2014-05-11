@@ -32,7 +32,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"首页";
-    _current_album_id = @"1";
+   
+    
+    NSString *aid = [USER_DEFAULT objectForKey:@"cache_current_album_id"];
+    if (aid) {
+        _current_album_id = aid;
+    }else{
+         _current_album_id = @"1";
+    }
+    
     [self search_with_album_id];
     
     //
@@ -113,6 +121,8 @@
 - (void)search_with_album_id
 {
     self.input_album_number_view.text = _current_album_id;
+    
+    [USER_DEFAULT setObject:_current_album_id forKey:@"cache_current_album_id"];
     
     CSMImageInfoManager *info = [CSMImageInfoManager sharedCSMImageInfoManager];
     CSMImageInfo *image = [info get_album_with_id:_current_album_id];
