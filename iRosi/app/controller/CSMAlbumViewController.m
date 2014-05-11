@@ -23,6 +23,13 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        NSString *aid = [USER_DEFAULT objectForKey:@"cache_current_album_id"];
+        if (aid) {
+            _current_album_id = aid;
+        }else{
+            _current_album_id = @"1";
+        }
+        
     }
     return self;
 }
@@ -32,15 +39,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"首页";
-   
-    
-    NSString *aid = [USER_DEFAULT objectForKey:@"cache_current_album_id"];
-    if (aid) {
-        _current_album_id = aid;
-    }else{
-         _current_album_id = @"1";
-    }
-    
+
     [self search_with_album_id];
     
     //
@@ -141,12 +140,14 @@
         return;
     }
     _current_album_id = [NSString stringWithFormat:@"%d",[_current_album_id intValue] - 1];
+    [USER_DEFAULT setObject:_current_album_id forKey:@"cache_current_album_id"];
     [self search_with_album_id];
 }
 
 -(IBAction)next_album:(UIButton *)sender
 {
     _current_album_id = [NSString stringWithFormat:@"%d",[_current_album_id intValue] + 1];
+    [USER_DEFAULT setObject:_current_album_id forKey:@"cache_current_album_id"];
     [self search_with_album_id];
 }
 

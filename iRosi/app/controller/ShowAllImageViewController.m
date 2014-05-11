@@ -9,6 +9,7 @@
 #import "ShowAllImageViewController.h"
 #import "CSMImageInfoManager.h"
 #import "CSMImageInfo.h"
+#import "CSMAppDelegate.h"
 
 // 展示 帖子 图片1 图片2 图片3 图片4
 // 展示 图片
@@ -49,6 +50,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = kAppTintColor;
     
     UIScrollView * myScrollView = [[UIScrollView alloc] init];
     myScrollView.frame = self.view.bounds;
@@ -71,7 +73,7 @@
     
     int BtnH = 70;
     int BtnHS = 10;
-    int BtnY = 40;
+    int BtnY = 10;
     
     int i = 0;
     for (i = 0; i < [myImageUrlArr count]; i++ ) {
@@ -91,7 +93,7 @@
     int getEndImageYH = (BtnH+BtnHS) *(i/4) + BtnY ;
     
     if ( getEndImageYH > myScrollView.frame.size.height ) {
-        myScrollView.contentSize = CGSizeMake( myScrollView.frame.size.width , getEndImageYH );
+        myScrollView.contentSize = CGSizeMake( myScrollView.frame.size.width , getEndImageYH + 80 );
     }else{
         myScrollView.contentSize = CGSizeMake( myScrollView.frame.size.width , myScrollView.frame.size.height + 1 );
     }
