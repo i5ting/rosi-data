@@ -87,5 +87,5 @@ rake dbmigrate && rake run
 
 ## todo
 
-- 缓存默认的album id
+- 缓存默认的album id(ok)
 - 使用FastImageCache
