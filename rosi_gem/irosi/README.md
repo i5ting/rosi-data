@@ -18,7 +18,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
+```
+Rosi.download do
+  for num in 1..8
+	item(num)
+  end
+end
+```
+
+or 
+
+```
+Rosi.download do
+  item(1)
+  item(2)
+  item(4)
+end
+```
 
 ## Contributing
 

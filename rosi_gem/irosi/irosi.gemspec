@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Irosi::VERSION
   spec.authors       = ["shiren1118"]
   spec.email         = ["shiren1118@126.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "rosi image "
+  spec.description   = "rosi image downloader"
   spec.homepage      = ""
   spec.license       = "MIT"
 
