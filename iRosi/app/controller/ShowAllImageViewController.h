@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 //#import "MWPhotoBrowser.h"
+#import "CSMBaseViewController.h"
 
-@interface ShowAllImageViewController : UIViewController
+@interface ShowAllImageViewController : CSMBaseViewController
 
 - (id)initWithAlbumId:(NSString *)aid;
 

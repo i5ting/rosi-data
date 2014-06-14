@@ -45,13 +45,6 @@
     //
     [self add_guesture];
     
-    UIButton *_right_btn = [self add_navigation_right_button:@""];
-    _right_btn.hidden = NO;
-    CGRect f = _right_btn.frame;
-    f.size.width = 60;
-    f.origin.x = 30;
-    _right_btn.frame = f;
-    [_right_btn setTitle:@"查看" forState:UIControlStateNormal];
 }
 
 -(void)add_guesture{

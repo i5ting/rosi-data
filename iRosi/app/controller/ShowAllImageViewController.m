@@ -97,7 +97,14 @@
     }else{
         myScrollView.contentSize = CGSizeMake( myScrollView.frame.size.width , myScrollView.frame.size.height + 1 );
     }
-    
+ 
+    UIButton *_right_btn = [self add_navigation_right_button:@""];
+    _right_btn.hidden = NO;
+    CGRect f = _right_btn.frame;
+    f.size.width = 60;
+    f.origin.x = 30;
+    _right_btn.frame = f;
+    [_right_btn setTitle:@"Next" forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
