@@ -18,7 +18,6 @@
 
 
 
-
 @implementation CSMImageInfoManager
 
 SINGLETON_FOR_CLASS(CSMImageInfoManager)
@@ -105,6 +104,7 @@ SINGLETON_FOR_CLASS(CSMImageInfoManager)
         }
     }];
     
+    kAppTintColor
     return image;
 }
 
