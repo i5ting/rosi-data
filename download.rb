@@ -27,11 +27,11 @@ def download_pics_albumID(albumID)
   coverfilepath = dir + "/ROSI-#{albumID.to_s}-" + "000.jpg"
   puts "\nDownloading " + coverurl
   puts 'Store in ' + coverfilepath
-  myretry do
-    Curl::Easy.download( coverurl, coverfilepath ) do |curl|
-      curl.headers["Referer"] = url
-    end
-  end
+  # myretry do
+  #   Curl::Easy.download( coverurl, coverfilepath ) do |curl|
+  #     curl.headers["Referer"] = url
+  #   end
+  # end
 
   i = 1
   anchors = doc.css("div.album-thumbs-free a")
@@ -42,18 +42,18 @@ def download_pics_albumID(albumID)
 
     puts "\nDownloading " + imgurl
     puts 'Store in ' + filepath
-    myretry do
-      Curl::Easy.download( imgurl, filepath ) do |curl|
-        curl.headers["Referer"] = url
-      end
-    end
+    # myretry do
+   #    Curl::Easy.download( imgurl, filepath ) do |curl|
+   #      curl.headers["Referer"] = url
+   #    end
+   #  end
 
-    sleep 0.1
+    # sleep 0.1
     i += 1
   end
 end
 
 # main loop
-for num in 1..882
+for num in 1..2000
     download_pics_albumID num
 end
